@@ -1,0 +1,83 @@
+% Paquetes incluidos:
+% ======== =========
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{amsfonts}
+
+
+% Paquetes específicos de Beamer
+\usepackage{beamerthemeshadow}
+
+\usepackage{graphicx}
+
+
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{url}
+\let\tmpurl\url\renewcommand{\url}[1]{\begingroup\footnotesize\tmpurl{#1}\endgroup} 
+
+\usepackage{verbatim}
+
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,shapes,snakes}
+
+\usepackage{listings}
+
+%---------Listing---------------------------------
+%-- Formato de los listados de código
+\lstset{ 
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily\color{burdeos},
+     identifierstyle=,
+     showstringspaces = false,
+     basicstyle=\scriptsize\ttfamily,
+     commentstyle=\color{violeta},
+     keywordstyle=\bfseries,
+   }
+ 
+% minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+
+% estilo de consola   
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+   
+%estilo para C
+\lstdefinestyle{C}
+   {language=C,
+     %
+     numbers=none,
+     numbersep=0pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+     emptylines=2,
+   }
+
+%estilo para C++
+\lstdefinestyle{C++}
+   {language=C++,
+     %
+     numbers=none,
+     numbersep=0pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+     emptylines=2,
+   }
+
+%estilo para LaTeX
+\lstdefinestyle{LaTeX}
+   {language=[LaTeX]TeX
+   }
+
+%estilo para SQL
+\lstdefinestyle{SQL}
+  {language=SQL
+  }
